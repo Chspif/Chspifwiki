@@ -1,0 +1,58 @@
+{
+  "name": "@catppuccin/starlight",
+  "version": "1.0.2",
+  "license": "MIT",
+  "type": "module",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true,
+    "registry": "https://registry.npmjs.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/catppuccin/starlight.git",
+    "directory": "packages/catppuccin-starlight"
+  },
+  "homepage": "https://starlight.catppuccin.com/",
+  "bugs": {
+    "url": "https://github.com/catppuccin/starlight/issues"
+  },
+  "sponsor": {
+    "url": "https://opencollective.com/catppuccin"
+  },
+  "exports": {
+    ".": "./index.ts",
+    "./styles/*": "./styles/*",
+    "./themes/*": "./themes/*"
+  },
+  "author": "Reuben Tier <otterlord.dev@gmail.com>",
+  "contributors": [
+    "Louis Escher <louisescher@proton.me>"
+  ],
+  "files": [
+    "index.ts",
+    "styles",
+    "themes"
+  ],
+  "keywords": [
+    "withastro",
+    "starlight",
+    "catppuccin"
+  ],
+  "scripts": {
+    "dev": "nodemon --watch \"./starlight.tera\" -e tera --exec \"pnpm build\"",
+    "build": "whiskers starlight.tera"
+  },
+  "devDependencies": {
+    "astro": "catalog:",
+    "nodemon": "^3.1.7",
+    "typescript": "catalog:"
+  },
+  "peerDependencies": {
+    "@astrojs/starlight": ">=0.34",
+    "astro": "^5.0.0"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "catalog:"
+  }
+}
