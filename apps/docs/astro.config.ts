@@ -59,6 +59,7 @@ export default defineConfig({
 					label: "其他",
 					items: [
 						{ label: "配置", slug: "other/config" },
+						{ label: "carpet设置", slug: "other/carpet-settings" },
 						{ label: "开源", slug: "other/open-source" },
 						{ label: "Q&A", slug: "other/qa" },
 					],
