@@ -45,7 +45,9 @@ export default defineConfig({
 					items: [
 						{ label: "关于交流", slug: "rules/server-rules" },
 						{ label: "关于游戏内", slug: "rules/ingame" },
+						{ label: "关于生电机器建造", slug: "rules/redstone-machines" },
 						{ label: "关于活跃度", slug: "rules/time" },
+						{ label: "关于违规行为", slug: "rules/violations" },
 					],
 				},
 				{
