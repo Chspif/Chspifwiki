@@ -7,7 +7,7 @@ export default defineConfig({
 	site: "https://starlight.catppuccin.com",
 	integrations: [
 		starlight({
-			title: "Chspif Wiki",
+			title: "资料导航",
 			logo: {
 				src: "./src/assets/catppuccin.png",
 				alt: "Catppuccin logo",
@@ -51,6 +51,13 @@ export default defineConfig({
 					],
 				},
 				{
+					label: "进入服务器",
+					items: [
+						{ label: "白名单绑定", slug: "enter/whitelist" },
+						{ label: "资源下载", slug: "enter/download" },
+					],
+				},
+				{
 					label: "服务器内功能",
 					items: [
 						{ label: "服务器指令", slug: "features/server-commands" },
@@ -62,7 +69,6 @@ export default defineConfig({
 					items: [
 						{ label: "配置", slug: "other/config" },
 						{ label: "carpet设置", slug: "other/carpet-settings" },
-						{ label: "开源", slug: "other/open-source" },
 						{ label: "Q&A", slug: "other/qa" },
 					],
 				},

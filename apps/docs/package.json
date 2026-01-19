@@ -12,12 +12,16 @@
   },
   "dependencies": {
     "@astrojs/check": "catalog:",
+    "@astrojs/react": "^4.4.2",
     "@astrojs/starlight": "catalog:",
+    "@catppuccin/starlight": "workspace:*",
     "@fontsource/inter": "^5.2.6",
     "astro": "catalog:",
+    "crypto-js": "^4.2.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
     "sharp": "catalog:",
     "starlight-package-managers": "^0.11.0",
-    "@catppuccin/starlight": "workspace:*",
     "typescript": "catalog:"
   }
 }
