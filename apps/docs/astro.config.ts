@@ -8,10 +8,6 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: "资料导航",
-			logo: {
-				src: "./src/assets/catppuccin.png",
-				alt: "Catppuccin logo",
-			},
 			favicon: "/favicon.png",
 			social: [
 				{
@@ -43,18 +39,18 @@ export default defineConfig({
 				{
 					label: "规则",
 					items: [
-						{ label: "关于交流", slug: "rules/server-rules" },
+						{ label: "关于交流", slug: "rules/communication" },
 						{ label: "关于游戏内", slug: "rules/ingame" },
-						{ label: "关于生电机器建造", slug: "rules/redstone-machines" },
 						{ label: "关于活跃度", slug: "rules/time" },
 						{ label: "关于违规行为", slug: "rules/violations" },
+						{ label: "其他", slug: "rules/other" },
 					],
 				},
 				{
 					label: "进入服务器",
 					items: [
+						{ label: "准备工作", slug: "enter/prepare" },
 						{ label: "白名单绑定", slug: "enter/whitelist" },
-						{ label: "资源下载", slug: "enter/download" },
 					],
 				},
 				{
@@ -67,8 +63,8 @@ export default defineConfig({
 				{
 					label: "其他",
 					items: [
-						{ label: "配置", slug: "other/config" },
-						{ label: "carpet设置", slug: "other/carpet-settings" },
+						{ label: "mod设置", slug: "other/mod" },
+						{ label: "carpet配置", slug: "other/carpet-settings" },
 						{ label: "Q&A", slug: "other/qa" },
 					],
 				},
