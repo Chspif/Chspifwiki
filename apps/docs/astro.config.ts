@@ -51,6 +51,7 @@ export default defineConfig({
 					items: [
 						{ label: "准备工作", slug: "enter/prepare" },
 						{ label: "白名单绑定", slug: "enter/whitelist" },
+						{ label: "进入服务器", slug: "enter/enter" },
 					],
 				},
 				{

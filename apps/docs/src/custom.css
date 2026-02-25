@@ -1,3 +1,83 @@
 :root {
   --__sl-font: Inter, system-ui, sans-serif !important;
+  /* 全局背景图片变量 */
+  --bg-image: url('https://img.cdn1.vip/i/699ed75e88862_1772017502.webp') !important;
+}
+
+/* 全局背景图片样式 - 使用最高优先级 */
+* {
+  box-sizing: border-box !important;
+}
+
+html,
+body,
+#__starlight,
+.sl-layout,
+.sl-template--splash {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 100% !important;
+  min-height: 100vh !important;
+}
+
+/* 应用背景图片到body */
+body {
+  background: var(--bg-image) !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  position: relative !important;
+}
+
+/* 创建一个全屏的背景覆盖层 */
+body::before {
+  content: '' !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: var(--bg-image) !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  filter: blur(10px) !important;
+  z-index: -1 !important;
+  transform: scale(1.05) !important;
+}
+
+/* 为内容区域添加半透明背景，确保文字清晰可见 */
+.sl-layout {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(10px) !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* 确保头部也有半透明背景 */
+.sl-header {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(10px) !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* 确保splash模板的内容居中且清晰 */
+.sl-template--splash {
+  position: relative !important;
+  z-index: 2 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+/* 确保内容区域的背景也是半透明的 */
+.sl-content {
+  background-color: transparent !important;
+  position: relative !important;
+  z-index: 2 !important;
 }
