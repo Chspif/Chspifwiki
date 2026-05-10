@@ -30,11 +30,7 @@ export default defineConfig({
 					codeBackground: "var(--sl-color-gray-6)",
 				},
 			},
-			customCss: [
-				"@fontsource/inter/400.css",
-				"@fontsource/inter/600.css",
-				"./src/custom.css",
-			],
+			
 			sidebar: [
 				{
 					label: "规则",
