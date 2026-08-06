@@ -60,7 +60,6 @@ export default defineConfig({
 				{
 					label: "共享服务器",
 					items: [
-						{ label: "共享服务器配置", slug: "shared-server/server-config" },
 						{ label: "注意事项", slug: "shared-server/precautions" },
 					],
 				},
