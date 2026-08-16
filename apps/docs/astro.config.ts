@@ -9,6 +9,7 @@ export default defineConfig({
 		starlight({
 			title: "资料导航",
 			favicon: "/favicon.png",
+			customCss: ['./src/custom.css', '@fontsource/inter'],
 			social: [
 				{
 					label: "GitHub",

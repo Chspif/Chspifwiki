@@ -1,83 +1,228 @@
+/* =========================================================
+   Chspifwiki 前端风格 —— 模仿 lyjdtz/Token_Meter
+   Neutral grayscale palette + emerald accent + dark slate header
+   Only front-end styling; no content/function changes.
+   ========================================================= */
+
+/* ---- Fonts -------------------------------------------------- */
 :root {
-  --__sl-font: Inter, system-ui, sans-serif !important;
-  /* 全局背景图片变量 */
-  --bg-image: url('https://img.cdn1.vip/i/69ee515eb5fc5_1777226078.webp') !important;
+  --sl-font: 'Inter', var(--sl-font-system);
+  --sl-font-mono: ui-monospace, 'Cascadia Code', 'JetBrains Mono', 'SF Mono', Menlo, Consolas,
+    'Liberation Mono', monospace;
 }
 
-/* 全局背景图片样式 - 使用最高优先级 */
-* {
-  box-sizing: border-box !important;
+/* =========================================================
+   Dark theme (default)
+   ========================================================= */
+:root {
+  /* Text / gray ramp (neutral) */
+  --sl-color-white: oklch(0.985 0 0);
+  --sl-color-gray-1: oklch(0.92 0 0);
+  --sl-color-gray-2: oklch(0.8 0 0);
+  --sl-color-gray-3: oklch(0.708 0 0);
+  --sl-color-gray-4: oklch(0.556 0 0);
+  --sl-color-gray-5: oklch(0.42 0 0);
+  --sl-color-gray-6: oklch(0.205 0 0);
+  --sl-color-black: oklch(0.16 0 0);
+
+  /* Accent — emerald (Token_Meter: emerald-300/400) */
+  --sl-color-accent-low: #022c22;
+  --sl-color-accent: #34d399;
+  --sl-color-accent-high: #6ee7b7;
+
+  /* Semantic colors */
+  --sl-hue-green: 158;
+  --sl-color-green-low: oklch(0.3 0.08 162);
+  --sl-color-green: oklch(0.72 0.14 162);
+  --sl-color-green-high: oklch(0.85 0.12 162);
+
+  --sl-hue-red: 0;
+  --sl-color-red-low: oklch(0.32 0.1 20);
+  --sl-color-red: oklch(0.7 0.15 25);
+  --sl-color-red-high: oklch(0.85 0.12 20);
+
+  --sl-hue-orange: 35;
+  --sl-color-orange-low: oklch(0.33 0.08 60);
+  --sl-color-orange: oklch(0.75 0.14 70);
+  --sl-color-orange-high: oklch(0.87 0.11 70);
+
+  --sl-hue-blue: 220;
+  --sl-color-blue-low: oklch(0.32 0.08 240);
+  --sl-color-blue: oklch(0.7 0.13 250);
+  --sl-color-blue-high: oklch(0.86 0.1 250);
+
+  --sl-hue-purple: 270;
+  --sl-color-purple-low: oklch(0.32 0.09 285);
+  --sl-color-purple: oklch(0.7 0.14 290);
+  --sl-color-purple-high: oklch(0.86 0.11 290);
+
+  /* Text / bg */
+  --sl-color-text: var(--sl-color-gray-2);
+  --sl-color-text-accent: var(--sl-color-accent-high);
+  --sl-color-text-invert: var(--sl-color-accent-low);
+  --sl-color-bg: var(--sl-color-black);
+  --sl-color-bg-nav: #0f172a;
+  --sl-color-bg-sidebar: oklch(0.205 0 0);
+  --sl-color-bg-inline-code: oklch(0.24 0 0);
+  --sl-color-bg-accent: var(--sl-color-accent);
+
+  /* Hairlines */
+  --sl-color-hairline-light: rgb(255 255 255 / 0.08);
+  --sl-color-hairline: rgb(255 255 255 / 0.06);
+  --sl-color-hairline-shade: rgb(255 255 255 / 0.04);
+
+  /* Backdrop / shadows */
+  --sl-color-backdrop-overlay: oklch(0.13 0 0 / 0.66);
+  --sl-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.3);
+  --sl-shadow-md: 0 8px 24px rgb(0 0 0 / 0.35);
+  --sl-shadow-lg: 0 16px 48px rgb(0 0 0 / 0.45);
 }
 
-html,
-body,
-#__starlight,
-.sl-layout,
-.sl-template--splash {
-  margin: 0 !important;
-  padding: 0 !important;
-  height: 100% !important;
-  min-height: 100vh !important;
+/* =========================================================
+   Light theme
+   ========================================================= */
+:root[data-theme='light'] {
+  --sl-color-white: oklch(0.145 0 0);
+  --sl-color-gray-1: oklch(0.205 0 0);
+  --sl-color-gray-2: oklch(0.35 0 0);
+  --sl-color-gray-3: oklch(0.556 0 0);
+  --sl-color-gray-4: oklch(0.708 0 0);
+  --sl-color-gray-5: oklch(0.918 0 0);
+  --sl-color-gray-6: oklch(0.96 0 0);
+  --sl-color-gray-7: oklch(0.98 0 0);
+  --sl-color-black: oklch(0.982 0 0);
+
+  /* Accent — emerald (Token_Meter: emerald-500/600) */
+  --sl-color-accent-low: #d1fae5;
+  --sl-color-accent: #10b981;
+  --sl-color-accent-high: #047857;
+
+  --sl-hue-green: 158;
+  --sl-color-green-low: oklch(0.95 0.04 162);
+  --sl-color-green: oklch(0.55 0.14 162);
+  --sl-color-green-high: oklch(0.35 0.12 162);
+
+  --sl-hue-red: 0;
+  --sl-color-red-low: oklch(0.95 0.03 20);
+  --sl-color-red: oklch(0.58 0.15 25);
+  --sl-color-red-high: oklch(0.38 0.14 20);
+
+  --sl-hue-orange: 35;
+  --sl-color-orange-low: oklch(0.96 0.04 70);
+  --sl-color-orange: oklch(0.62 0.14 70);
+  --sl-color-orange-high: oklch(0.4 0.12 70);
+
+  --sl-hue-blue: 220;
+  --sl-color-blue-low: oklch(0.95 0.03 240);
+  --sl-color-blue: oklch(0.55 0.13 250);
+  --sl-color-blue-high: oklch(0.36 0.11 250);
+
+  --sl-hue-purple: 270;
+  --sl-color-purple-low: oklch(0.95 0.04 285);
+  --sl-color-purple: oklch(0.55 0.14 290);
+  --sl-color-purple-high: oklch(0.38 0.13 290);
+
+  --sl-color-text: var(--sl-color-gray-2);
+  --sl-color-text-accent: var(--sl-color-accent);
+  --sl-color-text-invert: var(--sl-color-black);
+  --sl-color-bg: var(--sl-color-black);
+  --sl-color-bg-nav: #0f172a;
+  --sl-color-bg-sidebar: oklch(1 0 0);
+  --sl-color-bg-inline-code: oklch(0.96 0 0);
+  --sl-color-bg-accent: var(--sl-color-accent);
+
+  --sl-color-hairline-light: oklch(0.918 0 0);
+  --sl-color-hairline: oklch(0.918 0 0);
+  --sl-color-hairline-shade: oklch(0.9 0 0);
+
+  --sl-color-backdrop-overlay: oklch(0.35 0 0 / 0.5);
+  --sl-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.06);
+  --sl-shadow-md: 0 8px 24px rgb(0 0 0 / 0.1);
+  --sl-shadow-lg: 0 16px 48px rgb(0 0 0 / 0.12);
 }
 
-/* 应用背景图片到body */
+/* =========================================================
+   Grid-pattern background (mimics Token_Meter body)
+   ========================================================= */
 body {
-  background: var(--bg-image) !important;
-  background-size: cover !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  background-attachment: fixed !important;
-  position: relative !important;
+  background-image: linear-gradient(to right, rgb(255 255 255 / 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.045) 1px, transparent 1px);
+  background-size: 28px 28px;
 }
 
-/* 创建一个全屏的背景覆盖层 */
-body::before {
-  content: '' !important;
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  background: var(--bg-image) !important;
-  background-size: cover !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  background-attachment: fixed !important;
-  filter: blur(10px) !important;
-  z-index: -1 !important;
-  transform: scale(1.05) !important;
+:root[data-theme='light'] body {
+  background-image: linear-gradient(to right, rgb(15 23 42 / 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(15 23 42 / 0.035) 1px, transparent 1px);
 }
 
-/* 为内容区域添加半透明背景，确保文字清晰可见 */
-.sl-layout {
-  background-color: rgba(255, 255, 255, 0.85) !important;
-  backdrop-filter: blur(10px) !important;
-  position: relative !important;
-  z-index: 1 !important;
+/* =========================================================
+   Header — always dark slate (#0f172a), like Token_Meter
+   ========================================================= */
+.header {
+  background-color: #0f172a;
+  border-bottom: 1px solid rgb(255 255 255 / 0.1);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.4);
 }
 
-/* 确保头部也有半透明背景 */
-.sl-header {
-  background-color: rgba(255, 255, 255, 0.9) !important;
-  backdrop-filter: blur(10px) !important;
-  position: relative !important;
-  z-index: 2 !important;
+.header .site-title {
+  color: #fff;
 }
 
-/* 确保splash模板的内容居中且清晰 */
-.sl-template--splash {
-  position: relative !important;
-  z-index: 2 !important;
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: center !important;
-  align-items: center !important;
-  text-align: center !important;
+.header .site-title:hover {
+  color: #6ee7b7;
 }
 
-/* 确保内容区域的背景也是半透明的 */
-.sl-content {
-  background-color: transparent !important;
-  position: relative !important;
-  z-index: 2 !important;
+/* Navigation / controls / search inside the dark header */
+.header .right-group,
+.header .social-icons a,
+.header label,
+.header starlight-theme-select label,
+.header button[data-open-modal],
+.header button > kbd {
+  color: #94a3b8;
+}
+
+.header .social-icons a:hover,
+.header label:hover,
+.header starlight-theme-select label:hover,
+.header button[data-open-modal]:hover {
+  color: #fff;
+}
+
+.header button[data-open-modal] {
+  border-color: rgb(255 255 255 / 0.15);
+  background-color: rgb(255 255 255 / 0.04);
+}
+
+.header button[data-open-modal]:hover {
+  border-color: rgb(255 255 255 / 0.3);
+}
+
+.header button > kbd {
+  background-color: rgb(255 255 255 / 0.08);
+}
+
+/* Theme-select dropdown: keep readable on the dark header */
+.header starlight-theme-select option {
+  background-color: #0f172a;
+  color: #cbd5e1;
+}
+
+.header .social-icons::after {
+  border-inline-end-color: rgb(255 255 255 / 0.15);
+}
+
+/* Mobile menu button */
+starlight-menu-button button {
+  background-color: rgb(255 255 255 / 0.08);
+  color: #fff;
+}
+
+starlight-menu-button button:hover {
+  background-color: rgb(255 255 255 / 0.14);
+}
+
+/* Selection color — emerald tint */
+::selection {
+  background-color: oklch(0.72 0.14 162 / 0.35);
 }
