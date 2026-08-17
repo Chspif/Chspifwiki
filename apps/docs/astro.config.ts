@@ -69,7 +69,6 @@ export default defineConfig({
 					items: [
 						{ label: "mod设置", slug: "other/mod" },
 						{ label: "carpet配置", slug: "other/carpet-settings" },
-						{ label: "Q&A", slug: "other/qa" },
 					],
 				},
 
