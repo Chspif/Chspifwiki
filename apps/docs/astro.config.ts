@@ -40,7 +40,6 @@ export default defineConfig({
 						{ label: "关于游戏内", slug: "rules/ingame" },
 						{ label: "关于活跃度", slug: "rules/time" },
 						{ label: "关于违规行为", slug: "rules/violations" },
-						{ label: "其他", slug: "rules/other" },
 					],
 				},
 				{
@@ -54,21 +53,15 @@ export default defineConfig({
 				{
 					label: "服务器内功能",
 					items: [
-						{ label: "服务器指令", slug: "features/server-commands" },
 						{ label: "服务器特殊内容", slug: "features/server-recipes" },
+						{ label: "服务器指令", slug: "features/server-commands" },
+
 					],
 				},
 				{
 					label: "共享服务器",
 					items: [
 						{ label: "注意事项", slug: "shared-server/precautions" },
-					],
-				},
-				{
-					label: "其他",
-					items: [
-						{ label: "mod设置", slug: "other/mod" },
-						{ label: "carpet配置", slug: "other/carpet-settings" },
 					],
 				},
 
