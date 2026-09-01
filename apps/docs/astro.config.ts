@@ -59,9 +59,10 @@ export default defineConfig({
 					],
 				},
 				{
-					label: "共享服务器",
+					label: "其他",
 					items: [
-						{ label: "注意事项", slug: "shared-server/precautions" },
+						{ label: "关于服务器定位", slug: "shared-server/whatisshengdian" },
+						{ label: "共享服务器注意事项", slug: "shared-server/precautions" },
 					],
 				},
 
