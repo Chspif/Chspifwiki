@@ -55,7 +55,6 @@ export default defineConfig({
 					items: [
 						{ label: "服务器特殊内容", slug: "features/server-recipes" },
 						{ label: "服务器指令", slug: "features/server-commands" },
-						{ label: "̵̡̛̮̤̲̜͇̟̊̑͜͢͢C​̸̯̫̩̣̖̓h​̡̬́̇͢͢͞s​̯̃̐̎̾̄͞p​̩̜̑͞.̭͂i​̶̨̙̹͟͜͝f​͎̲̰̓̒̄̓ ​͍͚͈̭̦̍̊7​̡̟̜̍̑̔͡ ​̨̳̬̀̇̐͝t​̢̼̾̿̒͜͡h", slug: "features/seven" },
 
 					],
 				},
